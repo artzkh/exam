@@ -8,9 +8,8 @@ CREATE TABLE Customers
 CREATE TABLE Orders
 (
     Id SERIAL PRIMARY KEY,
-    CustomerId INTEGER,
-    Quantity INTEGER,
-    FOREIGN KEY (CustomerId) REFERENCES Customers (Id)
+    CustomerId INTEGER REFERENCES Customers (Id),
+    Quantity INTEGER
 );
 
 create table service
